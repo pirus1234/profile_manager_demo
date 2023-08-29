@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./assets/Tektur-VariableFont_wdth,wght.ttf") format("truetype");
+}

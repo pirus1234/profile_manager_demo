@@ -1,0 +1,229 @@
+.LoginContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  min-width: 100svw;
+  transform: scale(0.88);
+  opacity: 0.88;
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.LoginWindow {
+  box-shadow: 0px 0px 15px #00000091;
+  color: white;
+  background: rgb(110,62,208);
+  background: linear-gradient(45deg, rgba(110,62,208,1) 0%, rgba(216,91,175,0.9977240896358543) 100%);
+  padding: 40px;
+}
+
+.LoginWindowSmallHeader {
+  font-size: 0.73rem;
+  font-weight: 100;
+  font-family: "tektur";
+  text-align: center;
+  user-select: none;
+}
+
+.LoginWindowUserLoginHeader {
+  display: flex;
+}
+
+.LoginWindowUserLoginHeader h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  width: 100%;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+  user-select: none;
+}
+
+.LoginWindowUserPassword {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  padding: 1.3rem;
+  font-size: 1.1rem;
+  background-color: #6875d9d2;
+  box-shadow: 5px 1px 8px #00000044;
+  justify-content: center;
+  
+}
+
+.LoginWindowUserPassword div{
+  flex-direction: column;
+  gap: 1.3rem;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.LoginWindowUserPassword div div{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  flex-grow: 1;
+  align-items:normal;
+}
+
+.LoginWindowUserPassword div:nth-child(2)  {
+  max-width: auto;
+}
+
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(2) span {
+  text-decoration:underline;
+  text-transform:uppercase;
+  letter-spacing: 0.2rem;
+  transition: transform 0.3s;
+}
+
+/* checkbox container */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 11px;
+  user-select: none;
+  align-items: center;
+}
+
+/* Hide the default checkbox */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* checkbox container */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label input:checked ~  div{
+  box-shadow: inset 2px 2px 3px #272d62d2,
+              inset -2px -2px 3px #8f9cffd2;
+}
+
+/* checkbox */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label input:checked ~ div:after {
+  opacity: 1;
+}
+
+/* checkbox */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label div:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #fff;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+/* checkbox */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label div:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+/* checkbox */
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(1) label div{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 100%;
+  box-shadow: 2px 2px 2px #272d62d2,
+              -2px -2px 2px #8f9cffd2;
+  transition-duration: 0.5s;
+}
+
+.LoginWindowUserPassword:nth-child(3) div:nth-of-type(3) div:nth-of-type(2) span:hover {
+  transform: scale(1.036);
+  cursor: pointer;
+}
+
+.LoginWindowUserPassword div:nth-child(3)  {
+  align-items: start;
+  max-width: fit-content;
+}
+
+.LoginWindowUserPassword div div div {
+  flex-grow: 0;
+  width: 14.3px;
+}
+
+.LoginWindowUserPassword div div span {
+  justify-content: center;
+  align-self: center;
+  flex-grow: 1;
+  user-select: none;
+}
+
+.LoginWindowUserPassword div div input {
+  width: 14.3px;
+  margin: 0px;
+}
+
+.LoginWindowUserPasswordImgContainer{
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(214,214,214,0.9) 78%, rgba(180,180,180,0.9) 100%);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  transform: scale(1.4) translateX(0px);
+  box-shadow: 10px 1px 10px #00000055;
+}
+
+.LoginWindowUserPasswordImgContainer img{
+  padding: 24px;
+  margin: 10px;
+  height: 96px;
+}
+
+.LoginWindowUserPassword div label
+ {
+  position: relative;
+ }
+
+.LoginWindowUserPassword div label span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 4px;
+  margin: 6px;
+  /* background: pink; */
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: #ffffff00;
+  transition: transform 120ms ease-in, background-color 120ms ease-in;
+  line-height: 1.4;
+  border-radius: 5px;
+  user-select: none;
+  font-size: 1.2rem;
+}
+
+.LoginWindowUserPassword div label input {
+  display: block;
+  width: 100%;
+  border: 2px solid white;
+  padding: 12px;
+  color: currentColor;
+  background: transparent;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1.2rem;
+  &:focus,
+  &:not(:placeholder-shown) {
+    & + span {
+      transform: translate(.25rem, -60%) scale(.8);
+      background: #ffffffff;
+      color: #6875d9;
+    }
+  }
+}
+
